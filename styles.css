@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+#container {
+    display: flex;
+    width: 800px;
+    height: 800px;
+    flex-wrap: wrap;
+
+}
+
+.square-div {
+    color: rebeccapurple;
+    border: 1px solid black;
+}
+
+.changeColor {
+    background-color: black;
+}
