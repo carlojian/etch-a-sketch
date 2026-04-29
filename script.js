@@ -23,8 +23,6 @@ inputGridBtn.addEventListener("click", () =>{
 })
 
 
-
-
 function createGrid(gridNumber, divHeight){
     for (let i = 0;i < gridNumber; i++){
         squareDiv = document.createElement("div")
@@ -36,11 +34,11 @@ function createGrid(gridNumber, divHeight){
 }
 
 container.addEventListener("mouseover", (e) => {
-    e.target.classList.add("changeColor")
-
+    e.target.style.backgroundColor = `rgb(${getRandomRGB()},${getRandomRGB()},${getRandomRGB()})`
 })
 
-
-
+function getRandomRGB(){
+    return Math.floor(Math.random() * 255)
+}
 
 createGrid(256, 50)

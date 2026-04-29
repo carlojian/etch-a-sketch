@@ -22,10 +22,6 @@ body {
     border: 1px solid black;
 }
 
-.changeColor {
-    background-color: black;
-}
-
 .input-grid-btn {
     order: -1;
 }
