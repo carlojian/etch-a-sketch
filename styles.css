@@ -4,7 +4,9 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 #container {
@@ -22,4 +24,8 @@ body {
 
 .changeColor {
     background-color: black;
+}
+
+.input-grid-btn {
+    order: -1;
 }

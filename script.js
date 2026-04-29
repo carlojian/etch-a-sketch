@@ -1,13 +1,30 @@
 let grid = 256
-const container = document.getElementById("container")
 
-function createGrid(gridNumber){
+inputGridBtn = document.createElement("button")
+inputGridBtn.textContent = "Hello World"
+inputGridBtn.classList.add("input-grid-btn")
+document.body.appendChild(inputGridBtn)
+
+inputGridBtn.addEventListener("click", () =>{
+
+    container.replaceChildren()
+
+    const cellPerSide = prompt("Enter Number");
+    let squaredCell = cellPerSide * cellPerSide
+    let cellSize = 800 / cellPerSide
+
+    createGrid(squaredCell, cellSize)
+
+})
+
+
+
+function createGrid(gridNumber, divHeight){
     for (let i = 0;i < gridNumber; i++){
-        console.log(i + 1)
         squareDiv = document.createElement("div")
         squareDiv.classList.add("square-div")
-        squareDiv.style.height = "50px"
-        squareDiv.style.width = "50px"
+        squareDiv.style.height = divHeight + "px"
+        squareDiv.style.width = divHeight + "px"
         container.appendChild(squareDiv)
     }
 }
@@ -19,4 +36,5 @@ container.addEventListener("mouseover", (e) => {
 
 
 
-createGrid(grid)
+
+createGrid(256, 50)
