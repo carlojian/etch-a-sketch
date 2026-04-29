@@ -9,13 +9,19 @@ inputGridBtn.addEventListener("click", () =>{
 
     container.replaceChildren()
 
-    const cellPerSide = prompt("Enter Number");
-    let squaredCell = cellPerSide * cellPerSide
-    let cellSize = 800 / cellPerSide
+    let cellPerSide = Number(prompt("Enter Number from 1-100"));
+
+    while(!Number.isInteger(cellPerSide) || cellPerSide < 0 || cellPerSide > 100){
+        cellPerSide = Number(prompt("Please enter a valid integer from 1–100"))
+    }
+
+    let squaredCell = cellPerSide * cellPerSide;
+    let cellSize = 800 / cellPerSide;
 
     createGrid(squaredCell, cellSize)
 
 })
+
 
 
 
